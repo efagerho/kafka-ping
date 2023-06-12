@@ -1,0 +1,17 @@
+[package]
+name = "rust-kafka-ping"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+hdrhistogram = "7.5.2"
+protobuf = "3"
+rdkafka = { version = "0.25", features = ["cmake-build"] }
+lazy_static = "1.4.0"
+
+[build-dependencies]
+protobuf-codegen = "3"
+protoc-rust = "2"

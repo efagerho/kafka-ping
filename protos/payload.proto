@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Payload {
+  oneof type {
+    string noise = 1;
+    Ping ping = 2;
+  }
+}
+
+message Ping {
+  int64 timestamp = 1;
+  string sender_id = 2;
+}
